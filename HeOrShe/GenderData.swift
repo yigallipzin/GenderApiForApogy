@@ -27,7 +27,7 @@ struct GenderData
     static func GetGender(name: String, completion: @escaping () -> Void)
     {
         guard let safeName = name.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {return}
-        guard let url = URL(string: "https://www.gender-api.com/get?name=\(safeName)&key=DKJatPQQqJyFYNPRjN")
+        guard let url = URL(string: "https://gender-api.com/get?name=\(safeName)&key=DKJatPQQqJyFYNPRjN")
         else {return}
 
         URLSession.shared.dataTask(with: url, completionHandler: {
